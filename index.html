@@ -79,7 +79,7 @@ Author:
 <!----Le code qui permet le chargement des données à partir du JSON---->
 <script type="text/javascript">
 	  var clicks=1;
-	  var clicked_
+	  var clicked_items=[];
 
 $( document ).ready(function() {
   var items = "";
@@ -115,7 +115,7 @@ var category = '<div class="col-md-2">'+
 '						    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><img src="images/close.png" title="close" /></button>'+
 '						     <h3 id="modal_title">'+val.title+'</h3>'+
 '						     <p id="modal_details">'+val.description+'</p>'+
-'<ul>'+
+'<ul id="product_'+val.id+'_data">'+
 '  <li>Male : '+val.weights.male+'</li>'+
 '  <li>Female : '+val.weights.female+'</li>'+
 '  <li>Child : '+val.weights.child+'</li>'+
@@ -142,12 +142,14 @@ var category = '<div class="col-md-2">'+
 });
 							           
 function updateWeights(user_id,product_id) {
-	alert("USER : "+user_id+"   PRODUCT ID: "+product_id);
+
+	clicked_items.push(product_id);
+	alert(clicked_items);
 	if (clicks<3) {
 		clicks++;
 	}else{
-		alert(clicks);
 		clicks=0;
+		clicked_items=[];
 	}
 }
 </script>
