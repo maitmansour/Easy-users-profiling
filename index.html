@@ -22,6 +22,42 @@ Author:
 	</head>
 
 	<body>
+		<div class="header-bg">
+			<div class="container">
+				<div class="row">
+					
+					<div>					
+	 					<nav class="navbar navbar-default" role="navigation">
+						  <div class="container-fluid">
+						    
+						    					
+						    
+						    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						      <ul class="nav navbar-nav">
+						      	 <li>
+						         <div class="btn-group show-on-hover">
+							          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+							            <span id="choosen_user"></span><span class="caret"></span>
+							          </button>
+							          <ul class="dropdown-menu" role="menu" id="users">
+							          </ul>
+							        </div>						          
+						        </li>
+						        
+						        
+						        
+						      </ul>							      					    					      
+						    </div>
+						  </div><!-- /.container-fluid -->
+						</nav>
+							
+					</div>
+						
+				  
+      
+				</div>
+			</div>
+        </div>
 		<div class="container">
 			 <div class="content">	
 				 <div class="row">
@@ -38,6 +74,7 @@ Author:
 </html>
 <!----Importer les données JSON---->
   <script src="data/produits.js"></script>
+  <script src="data/users.js"></script>
 
 <!----Le code qui permet le chargement des données à partir du JSON---->
 <script type="text/javascript">
@@ -45,14 +82,24 @@ Author:
 
 $( document ).ready(function() {
   var items = "";
+  var users_html="";
+    	var url_string = window.location.href;
+		var url = new URL(url_string);
+		var user_id = url.searchParams.get("user_id");
+if (user_id==null) {
+	user_id=1;
+}
+alert(user_id);
+ $('#choosen_user').html('Switch users ( Current user '+user_id+' )');
+
 /* Itération sur les produits et génération des div qui contiens les informations des produits*/
   $.each( data, function( key, val ) {
-  	
+
 var category = '<div class="col-md-2">'+
 '					<div class="grid">'+
 '						<div class="portfolio app mix_all" >'+
 '							<div class="portfolio-wrapper">		'+
-'								<a data-toggle="modal" data-target="#modal_'+val.id+'" href="#" class="b-link-stripe b-animate-go  thickbox" onclick="updateWeights('+val.id+','+val.id+')">'+
+'								<a data-toggle="modal" data-target="#modal_'+val.id+'" href="#" class="b-link-stripe b-animate-go  thickbox" onclick="updateWeights('+user_id+','+val.id+')">'+
 '							     <img src="images/produits/'+val.id+'.png" style="height:186"><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/link-ico.png" alt=""/></h2></div>'+
 '							  	</a>'+
 '			                </div>'+
@@ -74,10 +121,17 @@ var category = '<div class="col-md-2">'+
 	
     items+=category;
   });
- 
  $('#produits').append(items);
-});
 
+   $.each( users, function( key, val ) {
+  	
+	var user = '<li><a href="?user_id='+val.id+'">'+val.username+'</a></li>';
+    users_html+=user;
+  });
+  $('#users').append(users_html);
+
+});
+							           
 function updateWeights(user_id,product_id) {
 	alert(clicks);
 	if (clicks<3) {
