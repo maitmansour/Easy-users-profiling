@@ -1,0 +1,78 @@
+<!--
+Author: 
+- Mohamed AIT MANSOUR
+- Meryem BELGHARBI
+-->
+
+<html>
+	<head>
+			<title>Produits</title>
+			<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+			<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+			<link href="css/theme.css" rel="stylesheet" type="text/css">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			
+			<!----webfonts---->
+			<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300" rel="stylesheet" type="text/css">
+			<!----//webfonts---->
+			<script type="text/javascript" src="js/jquery.min.js"></script>
+			<script type="text/javascript" src="js/bootstrap.js"></script>
+			<script type="text/javascript" src="js/bootstrap.min.js"></script>
+			<!--  jquery plguin -->
+	</head>
+
+	<body>
+		<div class="container">
+			 <div class="content">	
+				 <div class="row">
+				 	<div class="col-md-12 text-center">
+				 		<h2>Produits</h2>
+				 	</div>	
+				 </div>	
+				<div class="row" id="produits">
+						<!----Les produits seront chargées dans ce div---->
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<!----Importer les données JSON---->
+  <script src="data/produits.js"></script>
+
+<!----Le code qui permet le chargement des données à partir du JSON---->
+<script type="text/javascript">
+$( document ).ready(function() {
+  var items = "";
+/* Itération sur les produits et génération des div qui contiens les informations des produits*/
+  $.each( data, function( key, val ) {
+  	
+var category = '<div class="col-md-2">'+
+'					<div class="grid">'+
+'						<div class="portfolio app mix_all" >'+
+'							<div class="portfolio-wrapper">		'+
+'								<a data-toggle="modal" data-target="#modal_'+val.id+'" href="#" class="b-link-stripe b-animate-go  thickbox">'+
+'							     <img src="images/produits/'+val.id+'.png" style="height:186"><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/link-ico.png" alt=""/></h2></div>'+
+'							  	</a>'+
+'			                </div>'+
+'					    </div>		'+
+'						<p class="text-center">'+val.title+'</p>'+
+'                    </div>'+
+'				</div>'+
+'<!----start-model-box-'+val.id+'---->'+
+'						<div class="modal fade bs-example-modal-md light-box" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="modal_'+val.id+'">'+
+'						  <div class="modal-dialog modal-md">'+
+'						    <div class="modal-content light-box-info">'+
+'						    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><img src="images/close.png" title="close" /></button>'+
+'						     <h3 id="modal_title">'+val.title+'</h3>'+
+'						     <p id="modal_details">'+val.description+'</p>'+
+'						    </div>'+
+'						  </div>'+
+'						</div>'+
+'						<!----start-model-box---->';
+	
+    items+=category;
+  });
+ 
+ $('#produits').append(items);
+});
+</script>
