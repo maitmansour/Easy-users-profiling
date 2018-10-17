@@ -80,6 +80,7 @@ Author:
 <script type="text/javascript">
 	  var clicks=1;
 	  var clicked_items=[];
+	  var choosen_products=[];
 
 $( document ).ready(function() {
   var items = "";
@@ -100,7 +101,7 @@ var category = '<div class="col-md-2">'+
 '					<div class="grid">'+
 '						<div class="portfolio app mix_all" >'+
 '							<div class="portfolio-wrapper">		'+
-'								<a data-toggle="modal" data-target="#modal_'+val.id+'" href="#" class="b-link-stripe b-animate-go  thickbox" onclick="updateWeights('+user_id+','+val.id+')">'+
+'								<a data-toggle="modal" data-target="#modal_'+val.id+'" href="#" class="b-link-stripe b-animate-go  thickbox" onclick="updateWeights('+user_id+','+val.id+','+val.weights.is_done+')">'+
 '							     <img src="images/produits/'+val.id+'.png" style="height:186"><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/link-ico.png" alt=""/></h2></div>'+
 '							  	</a>'+
 '			                </div>'+
@@ -141,15 +142,22 @@ var category = '<div class="col-md-2">'+
 
 });
 							           
-function updateWeights(user_id,product_id) {
+function updateWeights(user_id,product_id,is_done) {
 
-	clicked_items.push(product_id);
-	alert(clicked_items);
-	if (clicks<3) {
+	if (is_done) {
 		clicks++;
+		clicked_items.push(product_id);
+
 	}else{
+		for (var i = 0; i <clicked_items.length ; i++) {
+				choosen_products.push(data[clicked_items[i]].weights);
+			}
+
+		   alert(JSON.stringify(choosen_products))
+
 		clicks=0;
 		clicked_items=[];
+		choosen_products=[];
 	}
 }
 </script>
