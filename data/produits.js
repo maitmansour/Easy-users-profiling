@@ -7,10 +7,10 @@ var data=[
       "weights":{
          "is_done":true,
          "male":"0.5",
-         "female":"0.8",
+         "female":"0.5",
          "child":"0.1",
-         "teen":"0.3",
-         "adult":"0.3",
+         "teen":"0.7",
+         "adult":"0.8",
          "old":"0.1"
       }
    },
@@ -22,10 +22,10 @@ var data=[
       "weights":{
          "is_done":true,
          "male":"0.5",
-         "female":"0.8",
+         "female":"0.5",
          "child":"0.1",
-         "teen":"0.3",
-         "adult":"0.3",
+         "teen":"0.7",
+         "adult":"0.8",
          "old":"0.1"
       }
    },
@@ -37,10 +37,10 @@ var data=[
       "weights":{
          "is_done":true,
          "male":"0.5",
-         "female":"0.8",
+         "female":"0.5",
          "child":"0.1",
-         "teen":"0.3",
-         "adult":"0.3",
+         "teen":"0.7",
+         "adult":"0.8",
          "old":"0.1"
       }
    },
@@ -81,11 +81,11 @@ var data=[
       "description":"Ce poète français est principalement connu pour ses fables considérées comme un des chefs d’œuvre de la littérature française. Il met en scène des animaux anthropomorphes et offre au début ou à la fin de sa fable une morale. Il est reçu à l'Académie française en 1684. La statue de cire de Jean de la Fontaine vous attend au musée Grévin.",
       "weights":{
          "is_done":true,
-         "male":"0.5",
-         "female":"0.8",
+         "male":"0.2",
+         "female":"0.3",
          "child":"0.1",
-         "teen":"0.3",
-         "adult":"0.3",
+         "teen":"0.1",
+         "adult":"0.2",
          "old":"0.1"
       }
    },
@@ -96,11 +96,11 @@ var data=[
       "description":"De son château de Versailles, Louis XIV, appelé le Roi Soleil, règne durant 72 ans. Ce monarque absolu dirige son royaume d'une main de fer. Sa fin de règne sera moins glorieuse : revers militaires, exode des protestants persécutés, révolte des Camisards et deux famines. La statue de cire du Roi soleil Louis XIV vous attend au musée Grévin.",
       "weights":{
          "is_done":true,
-         "male":"0.5",
-         "female":"0.8",
+         "male":"0.2",
+         "female":"0.3",
          "child":"0.1",
-         "teen":"0.3",
-         "adult":"0.3",
+         "teen":"0.1",
+         "adult":"0.2",
          "old":"0.1"
       }
    },
@@ -111,11 +111,11 @@ var data=[
       "description":"La marquise de Pompadour est la favorite de Louis XV. Très vite après leur première rencontre, il l'installe à Versailles dans un appartement proche du sien. Femme cultivée et de goût, mécène des arts, elle conseille le roi. Amie des philosophes, elle favorise la diffusion de l'esprit des lumières. La statue de cire de Mme de Pompadour vous attend au musée Grévin.",
       "weights":{
          "is_done":true,
-         "male":"0.5",
-         "female":"0.8",
+         "male":"0.2",
+         "female":"0.3",
          "child":"0.1",
-         "teen":"0.3",
-         "adult":"0.3",
+         "teen":"0.1",
+         "adult":"0.2",
          "old":"0.1"
       }
    },
@@ -156,11 +156,11 @@ var data=[
       "description":"Teddy Riner est un judoka qui combat dans la catégorie des poids lourds. Il débute le judo à l'âge de 5 ans. En 2007, à Rio de Janeiro, il devient le plus jeune champion du monde dans sa catégorie. Il enchaîne par la suite les victoires européennes et mondiales, et détient en 2014 le record de dix titres de champion du monde. La statue de cire de Teddy Riner était un ajout incontournable au Musée Grévin !",
       "weights":{
          "is_done":true,
-         "male":"0.5",
-         "female":"0.8",
-         "child":"0.1",
-         "teen":"0.3",
-         "adult":"0.3",
+         "male":"0.8",
+         "female":"0.2",
+         "child":"0.2",
+         "teen":"0.8",
+         "adult":"0.6",
          "old":"0.1"
       }
    },
@@ -171,11 +171,11 @@ var data=[
       "description":"Cristiano Ronaldo fait ses débuts de footballeur à l’âge de onze ans. C’est au sein du mythique club de Manchester United que Ronaldo se forge un nom, avant de rejoindre le Real Madrid en 2009. Actuel meilleur buteur de la Ligue des Champions, il est un des sportifs les plus médiatisés de sa génération. La statue de cire de Cristiano Ronaldo était un ajout incontournable au Musée Grévin !",
       "weights":{
          "is_done":true,
-         "male":"0.5",
-         "female":"0.8",
-         "child":"0.1",
-         "teen":"0.3",
-         "adult":"0.3",
+         "male":"0.8",
+         "female":"0.2",
+         "child":"0.2",
+         "teen":"0.8",
+         "adult":"0.6",
          "old":"0.1"
       }
    },
@@ -186,11 +186,11 @@ var data=[
       "description":"Camille Lacourt est un nageur français, spécialiste des épreuves de dos (50 et 100 m). Il s’illustre dès l’adolescence aux championnats de France cadets et juniors. Il est plusieurs fois titré, en 2011, il devient le premier champion du monde français de l'histoire de la natation, grâce à son temps de 52 s 76 centièmes à l'épreuve du 100 m dos. La statue de cire de Camille Lacourt était un ajout incontournable au Musée Grévin !",
       "weights":{
          "is_done":true,
-         "male":"0.5",
-         "female":"0.8",
-         "child":"0.1",
-         "teen":"0.3",
-         "adult":"0.3",
+         "male":"0.8",
+         "female":"0.2",
+         "child":"0.2",
+         "teen":"0.8",
+         "adult":"0.6",
          "old":"0.1"
       }
    },
@@ -232,10 +232,10 @@ var data=[
       "weights":{
          "is_done":true,
          "male":"0.5",
-         "female":"0.8",
+         "female":"0.6",
          "child":"0.1",
-         "teen":"0.3",
-         "adult":"0.3",
+         "teen":"0.9",
+         "adult":"0.7",
          "old":"0.1"
       }
    },
@@ -247,10 +247,10 @@ var data=[
       "weights":{
          "is_done":true,
          "male":"0.5",
-         "female":"0.8",
+         "female":"0.6",
          "child":"0.1",
-         "teen":"0.3",
-         "adult":"0.3",
+         "teen":"0.9",
+         "adult":"0.7",
          "old":"0.1"
       }
    },
@@ -262,10 +262,10 @@ var data=[
       "weights":{
          "is_done":true,
          "male":"0.5",
-         "female":"0.8",
+         "female":"0.6",
          "child":"0.1",
-         "teen":"0.3",
-         "adult":"0.3",
+         "teen":"0.9",
+         "adult":"0.7",
          "old":"0.1"
       }
    },
@@ -307,11 +307,11 @@ var data=[
       "weights":{
          "is_done":true,
          "male":"0.5",
-         "female":"0.8",
-         "child":"0.1",
-         "teen":"0.3",
-         "adult":"0.3",
-         "old":"0.1"
+         "female":"0.5",
+         "child":"0.5",
+         "teen":"0.5",
+         "adult":"0.5",
+         "old":"0.5"
       }
    },
    {
@@ -322,11 +322,11 @@ var data=[
       "weights":{
          "is_done":true,
          "male":"0.5",
-         "female":"0.8",
-         "child":"0.1",
-         "teen":"0.3",
-         "adult":"0.3",
-         "old":"0.1"
+         "female":"0.5",
+         "child":"0.5",
+         "teen":"0.5",
+         "adult":"0.5",
+         "old":"0.5"
       }
    },
    {
@@ -337,11 +337,11 @@ var data=[
       "weights":{
          "is_done":true,
          "male":"0.5",
-         "female":"0.8",
-         "child":"0.1",
-         "teen":"0.3",
-         "adult":"0.3",
-         "old":"0.1"
+         "female":"0.5",
+         "child":"0.5",
+         "teen":"0.5",
+         "adult":"0.5",
+         "old":"0.5"
       }
    },
    {
