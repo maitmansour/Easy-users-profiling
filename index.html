@@ -91,7 +91,6 @@ $( document ).ready(function() {
 if (user_id==null) {
 	user_id=1;
 }
-alert(user_id);
  $('#choosen_user').html('Switch users ( Current user '+user_id+' )');
 
 /* Itération sur les produits et génération des div qui contiens les informations des produits*/
@@ -149,15 +148,39 @@ function updateWeights(user_id,product_id,is_done) {
 		clicked_items.push(product_id);
 
 	}else{
+		clicked_items=clicked_items.filter((v, i, a) => a.indexOf(v) === i); 
 		for (var i = 0; i <clicked_items.length ; i++) {
-				choosen_products.push(data[clicked_items[i]].weights);
+				choosen_products.push(data[clicked_items[i]-1].weights);
 			}
-
-		   alert(JSON.stringify(choosen_products))
-
+			var points=[];
+		for (var i = 0; i <choosen_products.length ; i++) {
+				points.push([choosen_products[i].male,choosen_products[i].male,
+							choosen_products[i].female,choosen_products[i].female,
+							choosen_products[i].child,choosen_products[i].child,
+							choosen_products[i].teen,choosen_products[i].teen,
+							choosen_products[i].adult,choosen_products[i].adult,
+							choosen_products[i].old,choosen_products[i].old]);
+			}
+		   console.log(getCentroid(points));
+		   alert(JSON.stringify(points))
+		   // Change this product preferences based on clicked products
+		var new_weight=barycenterCalculator(choosen_products);
 		clicks=0;
 		clicked_items=[];
 		choosen_products=[];
 	}
 }
+
+function barycenterCalculator(weights) {
+	// body...
+}
+
+var getCentroid = function (coord) 
+{
+	var center = coord.reduce(function (x,y) {
+		return [x[0] + y[0]/coord.length, x[1] + y[1]/coord.length, x[2] + y[2]/coord.length, x[3] + y[3]/coord.length, x[4] + y[4]/coord.length, x[5] + y[5]/coord.length] 
+	}, [0,0,0,0,0,0])
+	return center;
+}
+
 </script>
