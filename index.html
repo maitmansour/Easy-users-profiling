@@ -61,9 +61,12 @@ Author:
 		<div class="container">
 			 <div class="content">	
 				 <div class="row">
+				 	<div class="col-md-12 text-center" id="suggested_product">
+				 	</div>
 				 	<div class="col-md-12 text-center">
 				 		<h2>Produits</h2>
-				 	</div>	
+				 	</div>
+				 	<hr>
 				 </div>	
 				<div class="row" id="produits">
 						<!----Les produits seront chargées dans ce div---->
@@ -164,11 +167,20 @@ function updateWeights(user_id,product_id,is_done) {
 		
 		// get new weight, based on barycenter 
 		var new_weight=getCentroid(points);
+		suggestProduct(new_weight);
 		console.log(getCentroid(points));
 		clicks=0;
 		clicked_items=[];
 		choosen_products=[];
 	}
+}
+
+
+function suggestProduct(weights) {
+	// TOODO compare weight with existing weights and siggest one product
+var finded_product = '<h2>Suggested Product : </h2>'+
+'    					<div class="portfolio app mix_all">							<div class="portfolio-wrapper">										<a data-toggle="modal" data-target="#modal_2" href="#" class="b-link-stripe b-animate-go  thickbox" onclick="updateWeights(1,2,true)">							     <img src="images/produits/2.png" style="height:186"><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/link-ico.png" alt=""></h2></div>							  	</a>			                </div>					    </div>';
+  $('#suggested_product').html(finded_product);
 }
 
 // Barycenter calculator
