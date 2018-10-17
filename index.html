@@ -161,20 +161,16 @@ function updateWeights(user_id,product_id,is_done) {
 							choosen_products[i].adult,choosen_products[i].adult,
 							choosen_products[i].old,choosen_products[i].old]);
 			}
-		   console.log(getCentroid(points));
-		   alert(JSON.stringify(points))
-		   // Change this product preferences based on clicked products
-		var new_weight=barycenterCalculator(choosen_products);
+		
+		// get new weight, based on barycenter 
+		var new_weight=getCentroid(points);
 		clicks=0;
 		clicked_items=[];
 		choosen_products=[];
 	}
 }
 
-function barycenterCalculator(weights) {
-	// body...
-}
-
+// Barycenter calculator
 var getCentroid = function (coord) 
 {
 	var center = coord.reduce(function (x,y) {
