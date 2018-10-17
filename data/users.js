@@ -4,7 +4,7 @@ var users=[
       "username":"user1",
       "weights":{
          "is_done":true,
-		 "male":"0.0",
+		   "male":"0.0",
          "female":"0.0",
          "child":"0.0",
          "teen":"0.0",
@@ -42,7 +42,7 @@ var users=[
       "id":"4",
       "username":"user4",
       "weights":{
-         "is_done":false,
+         "is_done":true,
          "male":"0.0",
          "female":"0.0",
          "child":"0.0",
@@ -53,7 +53,7 @@ var users=[
    },
    {
       "id":"5",
-      "username":"user4",
+      "username":"user5",
       "weights":{
          "is_done":true,
          "male":"0.0",
