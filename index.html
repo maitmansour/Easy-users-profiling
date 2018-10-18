@@ -86,6 +86,8 @@ Author:
 	  var choosen_products=[];
 
 $( document ).ready(function() {
+	//var arr=[1,2,3,4,5,7,8,9,10];
+	//alert(getClosest(6,arr));
   var items = "";
   var users_html="";
     	var url_string = window.location.href;
@@ -147,6 +149,7 @@ var category = '<div class="col-md-2">'+
 function updateWeights(user_id,product_id,is_done) {
 
 	if (is_done) {
+  		$('#suggested_product').html('');
 		clicks++;
 		clicked_items.push(product_id);
 
@@ -157,7 +160,7 @@ function updateWeights(user_id,product_id,is_done) {
 			}
 			var points=[];
 		for (var i = 0; i <choosen_products.length ; i++) {
-				points.push([choosen_products[i].male,choosen_products[i].male,
+			    points.push([choosen_products[i].male,choosen_products[i].male,
 							choosen_products[i].female,choosen_products[i].female,
 							choosen_products[i].child,choosen_products[i].child,
 							choosen_products[i].teen,choosen_products[i].teen,
@@ -177,7 +180,8 @@ function updateWeights(user_id,product_id,is_done) {
 
 
 function suggestProduct(weights) {
-	// TOODO compare weight with existing weights and siggest one product
+// TOODO compare weight with existing weights and siggest one product
+calculateMansourWeight(weights,data)
 var finded_product = '<h2>Suggested Product : </h2>'+
 '    					<div class="portfolio app mix_all">							<div class="portfolio-wrapper">										<a data-toggle="modal" data-target="#modal_2" href="#" class="b-link-stripe b-animate-go  thickbox" onclick="updateWeights(1,2,true)">							     <img src="images/produits/2.png" style="height:186"><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/link-ico.png" alt=""></h2></div>							  	</a>			                </div>					    </div>';
   $('#suggested_product').html(finded_product);
@@ -192,4 +196,34 @@ var getCentroid = function (coord)
 	return center;
 }
 
+function getClosest(search, arr) {
+   var closest = null;
+    $.each( arr, function( key, val ) {
+    	if (closest==null||Math.abs(search-closest)>Math.abs(val-search)) {
+    		closest = val;
+    	}
+	});
+   return closest;
+}
+
+function calculateMansourWeight(new_weight,data) {
+	var sommes=[];
+  $.each( data, function( i, val ) {
+  	var somme=0;
+somme+=val.weights.male-new_weight[0];
+somme+=val.weights.female-new_weight[1];
+somme+=val.weights.child-new_weight[2];
+somme+=val.weights.teen-new_weight[3];
+somme+=val.weights.adult-new_weight[4];
+somme+=val.weights.old-new_weight[5];
+    			sommes.push(somme);
+
+	});
+  console.log(sommes);
+  var min=Math.min.apply( Math, sommes );
+  console.log(min);
+      for (var i=0; i<sommes.length; i++)
+        if (sommes[i] === min) 
+        	alert(i);
+}
 </script>
