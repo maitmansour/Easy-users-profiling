@@ -100,12 +100,15 @@ if (user_id==null) {
 
 /* Itération sur les produits et génération des div qui contiens les informations des produits*/
   $.each( data, function( key, val ) {
-
+  	var done_style="";
+if (val.weights.is_done) {
+	done_style="border-style: solid;";
+}
 var category = '<div class="col-md-2">'+
 '					<div class="grid">'+
 '						<div class="portfolio app mix_all" >'+
 '							<div class="portfolio-wrapper">		'+
-'								<a data-toggle="modal" data-target="#modal_'+val.id+'" href="#" class="b-link-stripe b-animate-go  thickbox" onclick="updateWeights('+user_id+','+val.id+','+val.weights.is_done+')">'+
+'								<a data-toggle="modal" data-target="#modal_'+val.id+'" href="#" class="b-link-stripe b-animate-go  thickbox" onclick="updateWeights('+user_id+','+val.id+','+val.weights.is_done+')" style="'+done_style+'">'+
 '							     <img src="images/produits/'+val.id+'.png" style="height:186"><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/link-ico.png" alt=""/></h2></div>'+
 '							  	</a>'+
 '			                </div>'+
