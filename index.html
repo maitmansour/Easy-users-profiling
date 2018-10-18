@@ -151,6 +151,7 @@ function updateWeights(user_id,product_id,is_done) {
 	if (is_done) {
   		$('#suggested_product').html('');
 		clicks++;
+		//alert(product_id);
 		clicked_items.push(product_id);
 
 	}else{
@@ -181,9 +182,10 @@ function updateWeights(user_id,product_id,is_done) {
 
 function suggestProduct(weights) {
 // TOODO compare weight with existing weights and siggest one product
-calculateMansourWeight(weights,data)
+var suggested_product=calculateMansourWeight(weights,data);
+console.log(JSON.stringify(suggested_product));
 var finded_product = '<h2>Suggested Product : </h2>'+
-'    					<div class="portfolio app mix_all">							<div class="portfolio-wrapper">										<a data-toggle="modal" data-target="#modal_2" href="#" class="b-link-stripe b-animate-go  thickbox" onclick="updateWeights(1,2,true)">							     <img src="images/produits/2.png" style="height:186"><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/link-ico.png" alt=""></h2></div>							  	</a>			                </div>					    </div>';
+'    					<div class="portfolio app mix_all">							<div class="portfolio-wrapper">										<a data-toggle="modal" data-target="#modal_2" href="#" class="b-link-stripe b-animate-go  thickbox" onclick="updateWeights(1,2,true)">							     <img src="images/produits/'+suggested_product.id+'.png" style="height:186"><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/link-ico.png" alt=""></h2></div>							  	</a>			                </div>					    </div>';
   $('#suggested_product').html(finded_product);
 }
 
@@ -210,20 +212,27 @@ function calculateMansourWeight(new_weight,data) {
 	var sommes=[];
   $.each( data, function( i, val ) {
   	var somme=0;
-somme+=val.weights.male-new_weight[0];
+  	if (val.weights.is_done) {
+  		somme+=val.weights.male-new_weight[0];
 somme+=val.weights.female-new_weight[1];
 somme+=val.weights.child-new_weight[2];
 somme+=val.weights.teen-new_weight[3];
 somme+=val.weights.adult-new_weight[4];
 somme+=val.weights.old-new_weight[5];
-    			sommes.push(somme);
-
+    			sommes.push(Math.abs(somme));
+  	}
 	});
+  console.log("NEW WEIGHT : ");
+  console.log(new_weight);
+  console.log("SOMMES : ");
   console.log(sommes);
   var min=Math.min.apply( Math, sommes );
+  console.log("MINIMUM : ");
   console.log(min);
       for (var i=0; i<sommes.length; i++)
-        if (sommes[i] === min) 
-        	alert(i);
+        if (sommes[i] === min){
+        	console.log("CHOOSEN : "+i);
+        	return data[i];
+        } 
 }
 </script>
