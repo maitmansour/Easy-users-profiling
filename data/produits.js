@@ -6,12 +6,12 @@ var data=[
       "description":"Comédien passionné depuis son plus jeune âge, il fait ses premiers pas devant la caméra à seulement 10 ans. Son interprétation dans Gilbert Grapes est saisissante et révèle son talent précoce. Mais c'est son rôle dans Titanic qui le propulse au rang de star planétaire. Il enchaîne par la suite les grands films et est sacré aux Oscars en 2016. Créer une statue de cire de Leonardo Dicaprio était donc une évidence pour le musée Grévin !",
       "weights":{
          "is_done":true,
-         "male":"0.10",
-         "female":"0.20",
-         "child":"0.30",
-         "teen":"0.40",
-         "adult":"0.50",
-         "old":"0.60"
+         "male":"0.060",
+         "female":"0.060",
+         "child":"0.060",
+         "teen":"0.060",
+         "adult":"0.060",
+         "old":"0.060"
       }
    },
    {
@@ -21,12 +21,12 @@ var data=[
       "description":"Mannequin et actrice italienne, Monica Bellucci débute sa carrière chez Elite et Dolce&Gabbana. Elle décrochera ses premiers rôles au cinéma en Italie et se fera connaître à l'international en prenant part à de grosses productions. Sublime Italienne, elle figure régulièrement dans les listes des « plus belles femmes du monde ». La statue de cire de Monica Bellucci vous attend au musée Grévin !",
       "weights":{
          "is_done":true,
-         "male":"0.15",
-         "female":"0.25",
-         "child":"0.35",
-         "teen":"0.45",
-         "adult":"0.55",
-         "old":"0.65"
+         "male":"0.120",
+         "female":"0.120",
+         "child":"0.120",
+         "teen":"0.120",
+         "adult":"0.120",
+         "old":"0.120"
       }
    },
    {
@@ -36,12 +36,12 @@ var data=[
       "description":"Acteur, réalisateur et scénariste de génie, il devient avec son personnage Charlot, une icône du cinéma muet. En 65 ans de carrière, il réalise plus de 80 films, dont certains sont considérés aujourd'hui comme des chefs-d'œuvre. Il reçoit un Oscar d'honneur en 1972. La statue de cire de Charlie Chaplin dit Charlot vous attend au Musée Grévin !",
       "weights":{
          "is_done":true,
-         "male":"0.20",
-         "female":"0.30",
-         "child":"0.40",
-         "teen":"0.50",
-         "adult":"0.60",
-         "old":"0.70"
+         "male":"0.180",
+         "female":"0.180",
+         "child":"0.180",
+         "teen":"0.180",
+         "adult":"0.180",
+         "old":"0.180"
       }
    },
    {
@@ -81,12 +81,12 @@ var data=[
       "description":"Ce poète français est principalement connu pour ses fables considérées comme un des chefs d’œuvre de la littérature française. Il met en scène des animaux anthropomorphes et offre au début ou à la fin de sa fable une morale. Il est reçu à l'Académie française en 1684. La statue de cire de Jean de la Fontaine vous attend au musée Grévin.",
       "weights":{
          "is_done":true,
-         "male":"0.25",
-         "female":"0.35",
-         "child":"0.45",
-         "teen":"0.55",
-         "adult":"0.65",
-         "old":"0.75"
+         "male":"0.240",
+         "female":"0.240",
+         "child":"0.240",
+         "teen":"0.240",
+         "adult":"0.240",
+         "old":"0.240"
       }
    },
    {
@@ -96,12 +96,12 @@ var data=[
       "description":"De son château de Versailles, Louis XIV, appelé le Roi Soleil, règne durant 72 ans. Ce monarque absolu dirige son royaume d'une main de fer. Sa fin de règne sera moins glorieuse : revers militaires, exode des protestants persécutés, révolte des Camisards et deux famines. La statue de cire du Roi soleil Louis XIV vous attend au musée Grévin.",
       "weights":{
          "is_done":true,
-         "male":"0.30",
-         "female":"0.40",
-         "child":"0.50",
-         "teen":"0.60",
-         "adult":"0.70",
-         "old":"0.80"
+         "male":"0.300",
+         "female":"0.300",
+         "child":"0.300",
+         "teen":"0.300",
+         "adult":"0.300",
+         "old":"0.300"
       }
    },
    {
@@ -111,12 +111,12 @@ var data=[
       "description":"La marquise de Pompadour est la favorite de Louis XV. Très vite après leur première rencontre, il l'installe à Versailles dans un appartement proche du sien. Femme cultivée et de goût, mécène des arts, elle conseille le roi. Amie des philosophes, elle favorise la diffusion de l'esprit des lumières. La statue de cire de Mme de Pompadour vous attend au musée Grévin.",
       "weights":{
          "is_done":true,
-         "male":"0.35",
-         "female":"0.45",
-         "child":"0.55",
-         "teen":"0.65",
-         "adult":"0.75",
-         "old":"0.85"
+         "male":"0.360",
+         "female":"0.360",
+         "child":"0.360",
+         "teen":"0.360",
+         "adult":"0.360",
+         "old":"0.360"
       }
    },
    {
@@ -156,12 +156,12 @@ var data=[
       "description":"Teddy Riner est un judoka qui combat dans la catégorie des poids lourds. Il débute le judo à l'âge de 5 ans. En 2007, à Rio de Janeiro, il devient le plus jeune champion du monde dans sa catégorie. Il enchaîne par la suite les victoires européennes et mondiales, et détient en 2014 le record de dix titres de champion du monde. La statue de cire de Teddy Riner était un ajout incontournable au Musée Grévin !",
       "weights":{
          "is_done":true,
-         "male":"0.40",
-         "female":"0.50",
-         "child":"0.60",
-         "teen":"0.70",
-         "adult":"0.80",
-         "old":"0.90"
+         "male":"0.420",
+         "female":"0.420",
+         "child":"0.420",
+         "teen":"0.420",
+         "adult":"0.420",
+         "old":"0.420"
       }
    },
    {
@@ -171,12 +171,12 @@ var data=[
       "description":"Cristiano Ronaldo fait ses débuts de footballeur à l’âge de onze ans. C’est au sein du mythique club de Manchester United que Ronaldo se forge un nom, avant de rejoindre le Real Madrid en 2009. Actuel meilleur buteur de la Ligue des Champions, il est un des sportifs les plus médiatisés de sa génération. La statue de cire de Cristiano Ronaldo était un ajout incontournable au Musée Grévin !",
       "weights":{
          "is_done":true,
-         "male":"0.45",
-         "female":"0.55",
-         "child":"0.65",
-         "teen":"0.75",
-         "adult":"0.85",
-         "old":"0.95"
+         "male":"0.480",
+         "female":"0.480",
+         "child":"0.480",
+         "teen":"0.480",
+         "adult":"0.480",
+         "old":"0.480"
       }
    },
    {
@@ -186,12 +186,12 @@ var data=[
       "description":"Camille Lacourt est un nageur français, spécialiste des épreuves de dos (50 et 100 m). Il s’illustre dès l’adolescence aux championnats de France cadets et juniors. Il est plusieurs fois titré, en 2011, il devient le premier champion du monde français de l'histoire de la natation, grâce à son temps de 52 s 76 centièmes à l'épreuve du 100 m dos. La statue de cire de Camille Lacourt était un ajout incontournable au Musée Grévin !",
       "weights":{
          "is_done":true,
-         "male":"0.50",
-         "female":"0.60",
-         "child":"0.70",
-         "teen":"0.80",
-         "adult":"0.90",
-         "old":"0.10"
+         "male":"0.540",
+         "female":"0.540",
+         "child":"0.540",
+         "teen":"0.540",
+         "adult":"0.540",
+         "old":"0.540"
       }
    },
    {
@@ -231,12 +231,12 @@ var data=[
       "description":"Maître Gims, auteur, compositeur et interprète, est à la tête de nombreux tubes et de plus de 5 millions d’albums vendus. Son titre « Sapé comme jamais » fait danser la France entière, il bat des records sur Youtube avec plus de 300 millions de vues en Août 2017 et lui vaut une victoire de la musique en 2016.  La statue de cire de Maître Gims vous attend au Musée Grévin !",
       "weights":{
          "is_done":true,
-         "male":"0.55",
-         "female":"0.65",
-         "child":"0.75",
-         "teen":"0.85",
-         "adult":"0.95",
-         "old":"0.15"
+         "male":"0.600",
+         "female":"0.600",
+         "child":"0.600",
+         "teen":"0.600",
+         "adult":"0.600",
+         "old":"0.600"
       }
    },
    {
@@ -246,12 +246,12 @@ var data=[
       "description":"Kendji Girac connaît le succès en remportant à 17 ans la saison 3 de l’émission The Voice - La Plus Belle Voix. Après sa victoire, il fait danser la France sur son tube Color Gitano et ne s’arrête pas là. Ses origines catalanes et gitanes sont sa première source d’inspiration pour chanter, aussi bien en français qu’en espagnol. La statue de cire de Kendji Girac vous attend au Musée Grévin !",
       "weights":{
          "is_done":true,
-         "male":"0.60",
-         "female":"0.70",
-         "child":"0.80",
-         "teen":"0.90",
-         "adult":"0.10",
-         "old":"0.20"
+         "male":"0.660",
+         "female":"0.660",
+         "child":"0.660",
+         "teen":"0.660",
+         "adult":"0.660",
+         "old":"0.660"
       }
    },
    {
@@ -261,12 +261,12 @@ var data=[
       "description":"Katy Perry, chanteuse pop aux indénombrables récompenses, des Teen Choice Awards aux Golden Globes en passant par les MTV Europe Music Awards, est une figure emblématique de l’univers musical actuel. Auteur-Compositrice-Interprète, elle se fait connaître à l’international avec le tube I kissed a girl, elle se démarquera avec ses tenues toutes plus colorées et audacieuses les unes que les autres. La statue de cire de Katy Perry vous attend au Musée Grévin !",
       "weights":{
          "is_done":true,
-         "male":"0.65",
-         "female":"0.75",
-         "child":"0.85",
-         "teen":"0.95",
-         "adult":"0.15",
-         "old":"0.25"
+         "male":"0.720",
+         "female":"0.720",
+         "child":"0.720",
+         "teen":"0.720",
+         "adult":"0.720",
+         "old":"0.720"
       }
    },
    {
@@ -306,12 +306,12 @@ var data=[
       "description":"Le Petit Prince est un jeune garçon aux cheveux d’or qui parcourt l’univers en quête d’amitié jusqu’à son arrivée sur Terre. Créé par Antoine de Saint-Exupéry. Phénomène éditorial, c’est l’ouvrage de littérature française le plus traduit, le plus lu et le plus connu dans le monde. La statue de cire du Petit Prince trouve sans peine sa place dans l'univers onirique et poétique du Musée Grévin ! ",
       "weights":{
          "is_done":true,
-         "male":"0.70",
-         "female":"0.80",
-         "child":"0.90",
-         "teen":"0.10",
-         "adult":"0.20",
-         "old":"0.30"
+         "male":"0.780",
+         "female":"0.780",
+         "child":"0.780",
+         "teen":"0.780",
+         "adult":"0.780",
+         "old":"0.780"
       }
    },
    {
@@ -321,12 +321,12 @@ var data=[
       "description":"Dans le film d'animation L'Âge de Glace, Scrat est un petit écureuil préhistorique obnubilé par l'unique gland ayant survécu à la fonte des glaces. Personnage attachant et malchanceux, il devient une figure emblématique de la saga. La statue de Scrat plaît beaucoup aux enfants... petits et grands !",
       "weights":{
          "is_done":true,
-         "male":"0.75",
-         "female":"0.85",
-         "child":"0.95",
-         "teen":"0.15",
-         "adult":"0.25",
-         "old":"0.35"
+         "male":"0.840",
+         "female":"0.840",
+         "child":"0.840",
+         "teen":"0.840",
+         "adult":"0.840",
+         "old":"0.840"
       }
    },
    {
@@ -336,12 +336,12 @@ var data=[
       "description":"Aladdin est un personnage de fiction qui est apparu pour la première fois en 1992 dans le long métrage d'animation Aladdin. Il est inspiré du personnage homonyme, héros du conte des Mille et Une Nuits, Aladin et la Lampe merveilleuse !",
       "weights":{
          "is_done":true,
-         "male":"0.80",
-         "female":"0.90",
-         "child":"0.10",
-         "teen":"0.20",
-         "adult":"0.30",
-         "old":"0.40"
+         "male":"0.900",
+         "female":"0.900",
+         "child":"0.900",
+         "teen":"0.900",
+         "adult":"0.900",
+         "old":"0.900"
       }
    },
    {
