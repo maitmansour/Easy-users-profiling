@@ -26,31 +26,13 @@ Author:
 			<div class="container">
 				<div class="row">
 					
-					<div>					
-	 					<nav class="navbar navbar-default" role="navigation">
-						  <div class="container-fluid">
-						    
-						    					
-						    
-						    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						      <ul class="nav navbar-nav">
-						      	 <li>
-						         <div class="btn-group show-on-hover">
-							          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-							            <span id="choosen_user"></span><span class="caret"></span>
-							          </button>
-							          <ul class="dropdown-menu" role="menu" id="users">
-							          </ul>
-							        </div>						          
-						        </li>
-						        
-						        
-						        
-						      </ul>							      					    					      
-						    </div>
-						  </div><!-- /.container-fluid -->
-						</nav>
-							
+					<div class="col-md-12">					
+						<div class="right">
+							<ul class="list-unstyled">
+								<li class="a text-left"> <div id="clicks">0</div> Produits cliqués !</li>
+								<li><a href="#" onclick="updateWeights(0,0,false);">Suggérer un produit !</a></li>								
+							</ul>							
+						</div>	
 					</div>
 						
 				  
@@ -81,7 +63,7 @@ Author:
 
 <!----Le code qui permet le chargement des données à partir du JSON---->
 <script type="text/javascript">
-	  var clicks=1;
+	  var clicks=0;
 	  var clicked_items=[];
 	  var choosen_products=[];
 
@@ -101,7 +83,7 @@ if (user_id==null) {
   	var done_style="";
 if (val.weights.is_done) {
 	done_style="border-style: solid;";
-}
+
 var category = '<div class="col-md-2">'+
 '					<div class="grid">'+
 '						<div class="portfolio app mix_all" >'+
@@ -135,6 +117,7 @@ var category = '<div class="col-md-2">'+
 '						<!----start-model-box---->';
 	
     items+=category;
+    }
   });
  $('#produits').append(items);
 
@@ -153,6 +136,7 @@ function updateWeights(user_id,product_id,is_done) {
   		$('#suggested_product').html('');
   		$('.weights_area').html('');
 		clicks++;
+		$('#clicks').html(clicks);
 		//alert(product_id);
 		clicked_items.push(product_id);
 
