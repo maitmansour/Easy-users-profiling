@@ -86,8 +86,6 @@ Author:
 	  var choosen_products=[];
 
 $( document ).ready(function() {
-	//var arr=[1,2,3,4,5,7,8,9,10];
-	//alert(getClosest(6,arr));
   var items = "";
   var users_html="";
     	var url_string = window.location.href;
@@ -217,44 +215,20 @@ var getCentroid = function (coord)
 	}, [0,0,0,0,0,0])
 	return center;
 }
-
-function getClosest(search, arr) {
-   var closest = null;
-    $.each( arr, function( key, val ) {
-    	if (closest==null||Math.abs(search-closest)>Math.abs(val-search)) {
-    		closest = val;
-    	}
-	});
-   return closest;
-}
-
 function calculateMansourWeight(new_weight,data) {
 	var sommes=[];
 	var ids=[];
   $.each( data, function( i, val ) {
   	var somme=0;
   	if (val.weights.is_done) {
-  		somme+=val.weights.male-new_weight[0];
-somme+=val.weights.female-new_weight[1];
-somme+=val.weights.child-new_weight[2];
-somme+=val.weights.teen-new_weight[3];
-somme+=val.weights.adult-new_weight[4];
-somme+=val.weights.old-new_weight[5];
-ids.push(val.id);
+				ids.push(i);
     			sommes.push(euclideanDistance(val.weights,new_weight));
   	}
 	});
-  console.log("NEW WEIGHT : ");
-  console.log(new_weight);
-  console.log("SOMMES : ");
-  console.log(sommes);
   var min=Math.min.apply( Math, sommes );
-  console.log("MINIMUM : ");
-  console.log(min);
       for (var i=0; i<sommes.length; i++)
         if (sommes[i] === min){
-        	console.log("CHOOSEN : "+ids[i]);
-        	return data[ids[i]-1];
+        	return data[ids[i]];
         } 
 }
 
