@@ -89,7 +89,10 @@ function updateWeights(user_id, product_id, is_done) {
     clicked_items.push(product_id);
 
   } else {
-    clicked_items = clicked_items.filter((v, i, a) => a.indexOf(v) === i);
+    if (clicks==0) {
+      alert("Please click on some products before asking for new one !");
+    }else{
+       clicked_items = clicked_items.filter((v, i, a) => a.indexOf(v) === i);
     for (var i = 0; i < clicked_items.length; i++) {
       choosen_products.push(data[clicked_items[i] - 1].weights);
     }
@@ -111,6 +114,7 @@ function updateWeights(user_id, product_id, is_done) {
     clicks = 0;
     clicked_items = [];
     choosen_products = [];
+    }
   }
 }
 
@@ -122,7 +126,6 @@ function suggestProduct(weights) {
   console.log(JSON.stringify(suggested_product));
   var finded_product = '<h2>Suggested Product : </h2>' +
     '             <div>         <div class="grid">            <div class="portfolio app mix_all">             <div class="portfolio-wrapper">                   <a data-toggle="modal" data-target="#modal_' + suggested_product.id + '" href="#" class="b-link-stripe b-animate-go  thickbox" style="border-style: solid;">                   <img src="images/produits/' + suggested_product.id + '.png" style="height:186"><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/link-ico.png" alt=""></h2></div>                  </a>                      </div>              </div>                <p class="text-center">' + suggested_product.title + '</p>                    </div>        </div>';
-  alert(weights);
   $('.weights_area').append(' <h2>Calculated weights </h2><ul>' +
     '  <li>Male : ' + weights[0] + '</li>' +
     '  <li>Female : ' + weights[1] + '</li>' +
