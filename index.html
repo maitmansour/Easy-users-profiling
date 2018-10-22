@@ -206,7 +206,14 @@ alert(weights);
 var getCentroid = function (coord) 
 {
 	var center = coord.reduce(function (x,y) {
-		return [x[0] + y[0]/coord.length, x[1] + y[1]/coord.length, x[2] + y[2]/coord.length, x[3] + y[3]/coord.length, x[4] + y[4]/coord.length, x[5] + y[5]/coord.length] 
+		var res=[Math.round((x[0] + y[0]/coord.length)*1000)/1000,
+		         Math.round((x[1] + y[1]/coord.length)*1000)/1000,
+		         Math.round((x[2] + y[2]/coord.length)*1000)/1000,
+		         Math.round((x[3] + y[3]/coord.length)*1000)/1000,
+		         Math.round((x[4] + y[4]/coord.length)*1000)/1000,
+		         Math.round((x[5] + y[5]/coord.length)*1000)/1000
+		                     ];
+		return res; 
 	}, [0,0,0,0,0,0])
 	return center;
 }
@@ -223,6 +230,7 @@ function getClosest(search, arr) {
 
 function calculateMansourWeight(new_weight,data) {
 	var sommes=[];
+	var ids=[];
   $.each( data, function( i, val ) {
   	var somme=0;
   	if (val.weights.is_done) {
@@ -232,7 +240,8 @@ somme+=val.weights.child-new_weight[2];
 somme+=val.weights.teen-new_weight[3];
 somme+=val.weights.adult-new_weight[4];
 somme+=val.weights.old-new_weight[5];
-    			sommes.push(Math.abs(somme));
+ids.push(val.id);
+    			sommes.push(euclideanDistance(val.weights,new_weight));
   	}
 	});
   console.log("NEW WEIGHT : ");
@@ -244,8 +253,21 @@ somme+=val.weights.old-new_weight[5];
   console.log(min);
       for (var i=0; i<sommes.length; i++)
         if (sommes[i] === min){
-        	console.log("CHOOSEN : "+i);
-        	return data[i];
+        	console.log("CHOOSEN : "+ids[i]);
+        	return data[ids[i]-1];
         } 
 }
+
+function euclideanDistance(p1,p2){
+
+maleDiff=Math.pow((p1.male-p2[0]),2);
+femaleDiff=Math.pow((p1.female-p2[1]),2);
+childDiff=Math.pow((p1.child-p2[2]),2);
+teenDiff=Math.pow((p1.teen-p2[3]),2);
+adultDiff=Math.pow((p1.adult-p2[4]),2);
+oldDiff=Math.pow((p1.old-p2[5]),2);
+
+   return Math.round(Math.sqrt( maleDiff+femaleDiff+childDiff+teenDiff+adultDiff+oldDiff)*1000)/1000;
+}
+
 </script>
