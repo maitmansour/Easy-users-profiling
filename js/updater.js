@@ -21,14 +21,16 @@ function updateWeights(user_id, product_id, is_done) {
     var new_product_done=true;
     for (var i = 0; i < choosen_products.length; i++) {
       if (new_product_done) {
-                  if (new_product_clicks[product_id-1].length>0) {
+                var json_str = localStorage.getItem("new_product_"+product_id);
+        if (json_str!="" && json_str!=null) {
+             var new_product_clicks = JSON.parse(json_str);
                  points.push([
-        new_product_clicks[product_id-1][0], new_product_clicks[product_id-1][0],
-        new_product_clicks[product_id-1][1], new_product_clicks[product_id-1][1],
-        new_product_clicks[product_id-1][2], new_product_clicks[product_id-1][2],
-        new_product_clicks[product_id-1][3], new_product_clicks[product_id-1][3],
-        new_product_clicks[product_id-1][4], new_product_clicks[product_id-1][4],
-        new_product_clicks[product_id-1][5], new_product_clicks[product_id-1][5]
+        new_product_clicks[0], new_product_clicks[0],
+        new_product_clicks[1], new_product_clicks[1],
+        new_product_clicks[2], new_product_clicks[2],
+        new_product_clicks[3], new_product_clicks[3],
+        new_product_clicks[4], new_product_clicks[4],
+        new_product_clicks[5], new_product_clicks[5]
       ]);
         }
         new_product_done=false;
@@ -45,6 +47,8 @@ function updateWeights(user_id, product_id, is_done) {
     console.log("OK POINTS : "+JSON.stringify(points))
     // get new weight, based on barycenter 
     var new_weight = getCentroid(points);
+    localStorage.setItem("new_product_"+product_id,JSON.stringify(new_weight));
+
     updateCurrentProduct(new_weight,product_id);
       new_product_clicks[product_id-1]=new_weight;
         console.log(getCentroid(points));
