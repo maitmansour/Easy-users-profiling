@@ -38,3 +38,23 @@ function updateWeights(user_id, product_id, is_done) {
     }
   }
 }
+
+
+
+// Suggest a product based on weights
+function suggestProduct(weights) {
+  // TOODO compare weight with existing weights and siggest one product
+  var suggested_product = calculateMansourWeight(weights, data);
+  console.log(JSON.stringify(suggested_product));
+  var finded_product = '<h2>Suggested Product : </h2>' +
+    '             <div>         <div class="grid">            <div class="portfolio app mix_all">             <div class="portfolio-wrapper">                   <a data-toggle="modal" data-target="#modal_' + suggested_product.id + '" href="#" class="b-link-stripe b-animate-go  thickbox" style="border-style: solid;">                   <img src="images/produits/' + suggested_product.id + '.png" style="height:186"><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/link-ico.png" alt=""></h2></div>                  </a>                      </div>              </div>                <p class="text-center">' + suggested_product.title + '</p>                    </div>        </div>';
+  $('.weights_area').append(' <h2>Calculated weights </h2><ul>' +
+    '  <li>Male : ' + weights[0] + '</li>' +
+    '  <li>Female : ' + weights[1] + '</li>' +
+    '  <li>Child : ' + weights[2] + '</li>' +
+    '  <li>Teen : ' + weights[3] + '</li>' +
+    '  <li>Adult : ' + weights[4] + '</li>' +
+    '  <li>Old : ' + weights[5] + '</li>' +
+    '</ul> </div>')
+  $('#suggested_product').html(finded_product);
+}
