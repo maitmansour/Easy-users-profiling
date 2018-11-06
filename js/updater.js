@@ -11,7 +11,7 @@ function updateWeights(user_id, product_id, is_done) {
 
   } else {
     if (clicks==0) {
-      alert("Please click on some products before asking for updating weights !");
+     // alert("Please click on some products before asking for updating weights !");
     }else{
        clicked_items = clicked_items.filter((v, i, a) => a.indexOf(v) === i);
     for (var i = 0; i < clicked_items.length; i++) {
@@ -23,7 +23,7 @@ function updateWeights(user_id, product_id, is_done) {
       if (new_product_done) {
                 var json_str = localStorage.getItem("new_product_"+product_id);
         if (json_str!="" && json_str!=null) {
-             var new_product_clicks = JSON.parse(json_str);
+             new_product_clicks = JSON.parse(json_str);
                  points.push([
         new_product_clicks[0], new_product_clicks[0],
         new_product_clicks[1], new_product_clicks[1],
