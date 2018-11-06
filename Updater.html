@@ -1,0 +1,79 @@
+<!--
+   Author: 
+   - Mohamed AIT MANSOUR
+   - Meryem BELGHARBI
+   -->
+<html>
+   <head>
+      <title>Update Products Weights</title>
+      <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+      <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+      <link href="css/theme.css" rel="stylesheet" type="text/css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!----webfonts---->
+      <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300" rel="stylesheet" type="text/css">
+      <!----//webfonts---->
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <!--  jquery plguin -->
+   </head>
+   <body>
+      <div class="header-bg">
+         <div class="container">
+            <div class="row">
+               
+               <div>             
+                  <nav class="navbar navbar-default" role="navigation">
+                    <div class="container-fluid">
+                      
+                                    
+                      
+                      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li>
+                           <div class="btn-group show-on-hover">
+                               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                 <span id="choosen_user"></span><span class="caret"></span>
+                               </button>
+                               <ul class="dropdown-menu" role="menu" id="users">
+                               </ul>
+                             </div>                          
+                          </li>
+                          
+                          
+                          
+                        </ul>                                                                
+                      </div>
+                    </div><!-- /.container-fluid -->
+                  </nav>
+                     
+               </div>
+                  
+              
+      
+            </div>
+         </div>
+        </div>
+      <div class="container">
+         <div class="content">
+            <div class="row">
+               <div class="col-md-12 text-center" id="suggested_product">
+               </div>
+               <div class="col-md-12 text-center">
+                  <h2>Produits</h2>
+               </div>
+               <hr>
+            </div>
+            <div class="row" id="produits">
+               <!----Les produits seront chargées dans ce div---->
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
+<!----Importer les données JSON---->
+<script src="data/produits.js"></script>
+<script src="data/users.js"></script>
+<!----Traitement Js---->
+<script src="js/traitement.js"></script>
