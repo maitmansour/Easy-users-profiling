@@ -3,8 +3,7 @@ var clicks = 0;
 var clicked_items = [];
 var choosen_products = [];
 
-
-function loadProductsAndUsers() {
+function loadProductsAndUsers(isUpdater=false) {
     var items = "";
   var users_html = "";
   var url_string = window.location.href;
@@ -18,8 +17,11 @@ function loadProductsAndUsers() {
  /* Itération sur les produits et génération des div qui contiens les informations des produits*/
   $.each(data, function (key, val) {
     var done_style = "";
-    if (val.weights.is_done) {
-      done_style = "border-style: solid;";
+    if (val.weights.is_done || isUpdater) {
+      done_style = "";
+      if (val.weights.is_done) {
+        done_style="border-style: solid;";
+      }
 
       var category = '<div class="col-md-2">' +
         '         <div class="grid">' +
