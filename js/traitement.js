@@ -2,6 +2,7 @@
 var clicks = 0;
 var clicked_items = [];
 var choosen_products = [];
+var new_product_clicks=[];
 
 function loadProductsAndUsers(isUpdater=false) {
     var items = "";
@@ -16,6 +17,7 @@ function loadProductsAndUsers(isUpdater=false) {
 
  /* Itération sur les produits et génération des div qui contiens les informations des produits*/
   $.each(data, function (key, val) {
+    new_product_clicks[key]=[];
     var done_style = "";
     if (val.weights.is_done || isUpdater) {
       done_style = "";

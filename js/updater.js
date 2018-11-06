@@ -17,6 +17,7 @@ function updateWeights(user_id, product_id, is_done) {
     for (var i = 0; i < clicked_items.length; i++) {
       choosen_products.push(data[clicked_items[i] - 1].weights);
     }
+    new_product_clicks[product_id-1].push(choosen_products);
     var points = [];
     for (var i = 0; i < choosen_products.length; i++) {
       points.push([choosen_products[i].male, choosen_products[i].male,
@@ -27,7 +28,7 @@ function updateWeights(user_id, product_id, is_done) {
         choosen_products[i].old, choosen_products[i].old
       ]);
     }
-
+    console.log("NEW PRODUCT CLICKS : "+JSON.stringify(new_product_clicks));
     // get new weight, based on barycenter 
     var new_weight = getCentroid(points);
     updateCurrentProduct(new_weight);
