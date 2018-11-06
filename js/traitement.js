@@ -17,12 +17,22 @@ function loadProductsAndUsers(isUpdater=false) {
 
  /* Itération sur les produits et génération des div qui contiens les informations des produits*/
   $.each(data, function (key, val) {
-    new_product_clicks[key]=[];
     var done_style = "";
     if (val.weights.is_done || isUpdater) {
       done_style = "";
       if (val.weights.is_done) {
         done_style="border-style: solid;";
+      }else{
+      var json_str = localStorage.getItem("new_product_"+val.id);
+        if (json_str!="" && json_str!=null) {
+             var new_product_clicks = JSON.parse(json_str);
+val.weights.male=new_product_clicks[0];
+val.weights.female=new_product_clicks[1];
+val.weights.child=new_product_clicks[2];
+val.weights.teen=new_product_clicks[3];
+val.weights.adult=new_product_clicks[4];
+val.weights.old=new_product_clicks[5];
+           }
       }
 
       var category = '<div class="col-md-2">' +
