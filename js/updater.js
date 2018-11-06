@@ -76,3 +76,10 @@ function updateCurrentProduct(weights,product_id) {
     '</ul> </div>')
   $('#suggested_product').html(finded_product);
 }
+
+function resetLocalStorage() {
+ localStorage.clear();
+ alert("RESET DONE");
+ location.reload();
+
+}
