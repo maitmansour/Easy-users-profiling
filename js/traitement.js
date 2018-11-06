@@ -88,24 +88,6 @@ var getCentroid = function (coord) {
   return center;
 }
 
-// Euclidean distance and return product
-function calculateMansourWeight(new_weight, data) {
-  var sommes = [];
-  var ids = [];
-  $.each(data, function (i, val) {
-    var somme = 0;
-    if (val.weights.is_done) {
-      ids.push(i);
-      sommes.push(euclideanDistance(val.weights, new_weight));
-    }
-  });
-  var min = Math.min.apply(Math, sommes);
-  for (var i = 0; i < sommes.length; i++)
-    if (sommes[i] === min) {
-      return data[ids[i]];
-    }
-}
-
 // Euclidean distance calcul
 function euclideanDistance(p1, p2) {
 
