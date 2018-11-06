@@ -3,14 +3,6 @@ var clicks = 0;
 var clicked_items = [];
 var choosen_products = [];
 
-//To do on document ready
-$(document).ready(function () {
-    // Load products and users to page
-    loadProductsAndUsers();
-
-
-});
-
 
 function loadProductsAndUsers() {
     var items = "";
